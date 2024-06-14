@@ -12,11 +12,11 @@ const io = new Server(3000, {
 
 
 io.on("connection", (socket) => {
-  console.log("socket connected");
+//  console.log("socket connected");
 
   socket.on("clientId", async (userId) => {
     socket.join(userId);
-    console.log("user joined the room " + userId);
+   // console.log("user joined the room " + userId);
 
   
       
@@ -36,6 +36,6 @@ io.on("connection", (socket) => {
   });
 
   socket.on("disconnect", () => {
-    console.log("socket disconnected");
+   // console.log("socket disconnected");
   });
 });
